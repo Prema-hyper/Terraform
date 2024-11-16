@@ -1,14 +1,14 @@
 resource "aws_instance" "web" {
-  ami           = "ami-03265a0778a880afb" #devops-practice
+  ami           = "ami-0b4f379183e5706b9" #devops-practice
   instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.Project.id] # this means list
+  vpc_security_group_ids = [aws_security_group.project-all.id] # this means list
 
   tags = {
-    Name = "HelloTerraform"
+    Name = "pandu"
   }
 }
 
-resource "aws_security_group" "project" { #this is terraform name, for terraform reference only
+resource "aws_security_group" "project-all" { #this is terraform name, for terraform reference only
     name        = var.sg-name # this is for AWS
     description = var.sg-description
     #vpc_id      = aws_vpc.main.id
@@ -31,6 +31,6 @@ resource "aws_security_group" "project" { #this is terraform name, for terraform
     }
 
     tags = {
-        Name = "project-aws"
+        Name = "project-all-aws"
     }
 }

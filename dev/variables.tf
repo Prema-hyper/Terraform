@@ -1,6 +1,6 @@
 variable "sg-name" {
     type = string 
-    default = "project-aws"
+    default = "project-all-aws"
 }
 
 variable "sg-description" {
