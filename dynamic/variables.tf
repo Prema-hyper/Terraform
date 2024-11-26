@@ -16,9 +16,9 @@ variable "ingress_rules" {
 
         },
         {
-          description = "Allow port 22"
-          from_port   = 22
-          to_port     = 22
+          description = "Allow port 550"
+          from_port   = 550
+          to_port     = 550
           protocol    = "tcp"
           cidr_blocks = ["0.0.0.0/0"]
 
